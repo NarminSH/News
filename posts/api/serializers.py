@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from posts.models import Post
+from posts.models import Comment, Post
 
 
-class PostSerializer(serializers.ModelSerializer):  # serializer for all methods
+class PostSerializer(serializers.ModelSerializer):  # serializer for all method
     class Meta:
         model = Post
         fields = (
@@ -12,7 +12,7 @@ class PostSerializer(serializers.ModelSerializer):  # serializer for all methods
             "title",
             "link",
             "content",
-            "creation_date",
+            "creation_date"
         )
 
 
@@ -20,7 +20,7 @@ class CommentSerializer(
     serializers.ModelSerializer
 ):  # serializer for put, patch and delete method
     class Meta:
-        model = Post
+        model = Comment
         fields = (
             "id",
             "post",

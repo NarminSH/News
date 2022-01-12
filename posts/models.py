@@ -10,8 +10,7 @@ class Post(models.Model):
     """
     This model saves all posts
     """
-
-
+    
     # information
     author_name = models.CharField(verbose_name="Author", max_length=50)
     upvote_amount = models.IntegerField(default=0)

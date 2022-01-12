@@ -2,7 +2,6 @@ from django.http.response import JsonResponse
 from rest_framework.generics import (
     ListAPIView,
     ListCreateAPIView,
-    RetrieveUpdateAPIView,
     RetrieveUpdateDestroyAPIView,
     UpdateAPIView,
 )
@@ -66,7 +65,7 @@ class UpvoteAPIView(UpdateAPIView):
     lookup_url_kwarg = "pk"
 
     def patch(self, request, *args, **kwargs):
-        post = Post.objects.filter(post=kwargs.get("pk")).first()
-        print(post.upvote_amount)
+        post = Post.objects.filter(id=kwargs.get("pk")).first()
+        post.upvote_amount += 1
+        post.save()
         return self.partial_update(request, *args, **kwargs)
-
