@@ -8,13 +8,13 @@ from django.urls.base import reverse_lazy
 class Post(models.Model):
 
     """
-    This model is to save all posts
+    This model saves all posts
     """
 
+
+    # information
     author_name = models.CharField(verbose_name="Author", max_length=50)
     upvote_amount = models.IntegerField(default=0)
-
-    # informations
     title = models.CharField(max_length=50)
     link = models.CharField(max_length=140, null=True, blank=True)
     content = models.TextField(max_length=500)
@@ -30,6 +30,7 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
+
     """
     This model shows comments for particular post
     """
