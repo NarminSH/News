@@ -7,4 +7,8 @@ class PostsConfig(AppConfig):
 
     def ready(self):
         import posts.signals
+        from posts.upvote_schedule import task
+        task.start()
+    
+    
 

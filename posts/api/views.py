@@ -69,3 +69,11 @@ class UpvoteAPIView(UpdateAPIView):
         post.upvote_amount += 1
         post.save()
         return self.partial_update(request, *args, **kwargs)
+    
+    def reset_upvote(self):
+        posts = Post.objects.all()
+        for post in posts:
+            if post.upvote_amount > 0:
+                post.upvote_amount = 0
+                post.save()
+
