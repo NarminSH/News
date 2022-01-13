@@ -27,6 +27,9 @@ You can upvote only once.
 <img width="1134" alt="Screen Shot 2022-01-13 at 22 12 53" src="https://user-images.githubusercontent.com/79960958/149391662-03bcea41-9cf9-43e7-909e-14804e96706f.png">
 
 
+RECURRING JOB:
+For this I used APScheduler. You can find code in posts/upvote_schedule folder. For testing purposes you can change hours to seconds. 
+
 
 
 
