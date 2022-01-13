@@ -16,10 +16,12 @@ You can upvote only once.
 <img width="1130" alt="Screen Shot 2022-01-13 at 21 08 54" src="https://user-images.githubusercontent.com/79960958/149390713-727750c8-1eb0-40ed-9286-cea96fa5e08c.png">
 
 12. Now we have to take same steps to comments. In put method you don't need to send author it will take it automatically from token and set it. 
-<img width="1280" alt="Screen Shot 2022-01-13 at 22 10 36" src="https://user-images.githubusercontent.com/79960958/149390855-28c7ffc4-b38f-4ebb-afc1-5ca19dc4dd00.png">
+<img width="1119" alt="Screen Shot 2022-01-13 at 22 10 36" src="https://user-images.githubusercontent.com/79960958/149391631-fccb8164-f691-4229-a809-359382fbbdf5.png">
+
 
 13. We can look at comments under specific post
-<img width="1280" alt="Screen Shot 2022-01-13 at 22 12 53" src="https://user-images.githubusercontent.com/79960958/149391143-73d55852-2a1d-4998-ba80-f575fb09b7f4.png">
+<img width="1134" alt="Screen Shot 2022-01-13 at 22 12 53" src="https://user-images.githubusercontent.com/79960958/149391662-03bcea41-9cf9-43e7-909e-14804e96706f.png">
+
 
 
 
