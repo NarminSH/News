@@ -28,7 +28,8 @@ You can upvote only once.
 
 
 RECURRING JOB:
-For this I used APScheduler. You can find code in posts/upvote_schedule folder. For testing purposes you can change hours to seconds. 
+
+ For this I used APScheduler. You can find code in posts/upvote_schedule folder. For testing purposes you can change hours to seconds. 
 
 
 
