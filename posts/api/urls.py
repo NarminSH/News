@@ -5,7 +5,7 @@ from posts.api.views import (
     PostsAPIView,
     PostAPIView,
     CommentAPIView,
-    UpvoteAPIView
+    UpvoteAPIView,
 )
 
 app_name = "posts_api"

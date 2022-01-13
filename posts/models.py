@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls.base import reverse_lazy
+from users.models import User
 
 
 # Create your models here.
@@ -10,10 +11,12 @@ class Post(models.Model):
     """
     This model saves all posts
     """
-    
+
     # information
-    author_name = models.CharField(verbose_name="Author", max_length=50)
-    upvote_amount = models.IntegerField(default=0)
+    author_name = models.ForeignKey(
+        User, on_delete=models.CASCADE, db_index=True, related_name="posts"
+    )
+    upvote_amount = models.ManyToManyField(User, related_name="upvotes", blank=True)
     title = models.CharField(max_length=50)
     link = models.CharField(max_length=140, null=True, blank=True)
     content = models.TextField(max_length=500)
@@ -36,16 +39,16 @@ class Comment(models.Model):
 
     # relations
     post = models.ForeignKey(
-        Post,
-        on_delete=models.CASCADE,
-        db_index=True,
-        related_name="comments",
-        null=True,
-        blank=True,
+        Post, on_delete=models.CASCADE, db_index=True, related_name="comments"
     )
 
     # information
-    author_name = models.CharField(verbose_name="Author", max_length=50)
+    author_name = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        db_index=True,
+        related_name="comments",
+    )
     content = models.TextField(max_length=500)
 
     # moderations
@@ -54,4 +57,4 @@ class Comment(models.Model):
     )
 
     def __str__(self):
-        return self.author_name
+        return self.content

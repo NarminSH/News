@@ -12,7 +12,7 @@ class PostSerializer(serializers.ModelSerializer):  # serializer for all method
             "title",
             "link",
             "content",
-            "creation_date"
+            "creation_date",
         )
 
 
@@ -28,6 +28,9 @@ class CommentSerializer(
             "content",
             "creation_date",
         )
+        read_only_fields = [
+            "author_name",
+        ]
 
 
 class CommentListSerializer(CommentSerializer):  # serializer for get method
