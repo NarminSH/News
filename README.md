@@ -1,5 +1,8 @@
 # News
 DEPLOYMENT LINK: https://narminnews.herokuapp.com/api/v1.0/posts/ ( original https://narminnews.herokuapp.com/ )
+
+POSTMAN LINK: https://www.postman.com/speeding-spaceship-957949/workspace/news
+
 If you want to run this project locally follow below steps.
 1. First of all, you have to run python3 -m venv venv - to install virtualenv in your pyoject directory. 
 2. Then download everything in requirements.txt by running command pip3 install -r requirements.txt or  pip install -r requirements.txt (Python 2).
